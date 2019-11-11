@@ -24,4 +24,6 @@ Route::get('/detective/{slug}', 'DetectiveController@show');
 
 Route::get('/detectives', 'DetectiveController@index');
 
+Route::post('/crime', 'DetectiveController@storeCrime');
+
 Auth::routes();

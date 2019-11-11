@@ -3,7 +3,7 @@
 @section('content')
 <div class="page page-detective">
 
-    <section class="info">
+    <div class="info">
 
         <img class="portrait" src="{{ asset('img/'.$detective->slug.'.jpg') }}" alt="">
 
@@ -22,20 +22,26 @@
             <div class="status unavailable">Current status: <span>Not available</span></div>
         </div>
 
-    </section>
+    </div>
 
-    <section class="detective-assign">
+    <div class="detective-assign">
         <h2>Hire a detective</h2>
 
-        <form action="" method="post">
+        <form action="{{ action('DetectiveController@storeCrime') }}" method="post">
 
+            @csrf
             <input type="text" name="subject" placeholder="What crime has been commited?">
+            <br>
+
+            <input type="number" name="customer" placeholder="What is your customer no.?" min="1" max="9"> 
+            <br>
 
             <textarea name="description" placeholder="Thorough description"></textarea>
+            <br>
 
             <input type="submit" value="Hire">
         </form>
-    </section>
+    </div>
 
 </div>
 @endsection

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Detective;
+use App\Crime;
+
 
 class DetectiveController extends Controller
 {
@@ -31,6 +33,13 @@ class DetectiveController extends Controller
         $view = view('detective/index', compact('detectives'));
 
         return $view;
+    }
+
+    public function storeCrime(Request $request)
+    {
+        $crime = Crime::create(['subject' => $request->subject, 'description' => $request->description]);
+
+        return redirect(action('DetectiveController@index'));
     }
 
 }

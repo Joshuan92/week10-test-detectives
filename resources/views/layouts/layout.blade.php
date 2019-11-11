@@ -7,10 +7,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
 
-    <link href="./css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
 
-
-    {{-- load the stylesheet --}}
 </head>
 <body>
 
