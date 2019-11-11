@@ -6,13 +6,16 @@
     <title>World Class Detectives</title>
 
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
-    
+
+    <link href="./css/main.css" rel="stylesheet">
+
+
     {{-- load the stylesheet --}}
 </head>
 <body>
 
     <nav class="menu">
-        <a href="#">Home</a>
+        <a href="/">Home</a>
         @guest
             <a href="{{ route('login') }}">Login</a>
             <a href="{{ route('register') }}">Register</a>

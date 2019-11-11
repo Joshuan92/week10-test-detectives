@@ -12,7 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+
+Route::get('/detective/{slug}', 'DetectiveController@show');
 
 Auth::routes();
