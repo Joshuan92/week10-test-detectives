@@ -22,4 +22,6 @@ Route::get('/home', function () {
 
 Route::get('/detective/{slug}', 'DetectiveController@show');
 
+Route::get('/detectives', 'DetectiveController@index');
+
 Auth::routes();
